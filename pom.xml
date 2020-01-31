@@ -24,6 +24,14 @@
 			<version>4.8.0</version>
 			<scope>test</scope>
 		</dependency>
+		
+				<!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
+		<dependency>
+		    <groupId>net.masterthought</groupId>
+		    <artifactId>cucumber-reporting</artifactId>
+		    <version>4.8.0</version>
+		</dependency>		
+			
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
@@ -49,6 +57,25 @@
 					<threadCount>8</threadCount>
 				</configuration>				
 			</plugin>
+			
+			        <plugin>
+        <groupId>net.masterthought</groupId>
+        <artifactId>maven-cucumber-reporting</artifactId>
+        <version>3.4.0</version>
+          <executions>
+            <execution>
+                <id>execution</id>
+                <phase>test</phase>
+                <goals>
+                    <goal>generate</goal>
+                </goals>
+                <configuration>
+                    <outputDirectory>${project.build.directory}/cucumber-maven-reports</outputDirectory>
+                    <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+                </configuration>
+            </execution>
+          </executions>
+        </plugin>
 		</plugins>
 	</build>
 </project>

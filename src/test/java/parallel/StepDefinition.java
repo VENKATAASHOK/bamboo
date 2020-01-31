@@ -81,16 +81,16 @@ public class StepDefinition {
 
 	private String support = "//A[@class='a-link a-link--nav'][text()='Support']";
 	
-	private String findans = "//A[@href='https://homesupport.irobot.com/?_ga=2.152020601.1100369275.1580400811-1583972020.1578588772'][text()='Find Answers']";
+	private String findans = "//IMG[@src='/-/media/images/features/navigation/support/find_answers.ashx?h=116&la=en&mh=300&mw=300&w=117&lm=636911243120000000&hash=3DDC29452FD85BEAB4C763D62BD992C9']";
 	
 
-	private String regrob = "//A[@href='https://homesupport.irobot.com/app/utils/create_account/redirect/products%252Fregister?_ga=2.178227941.1100369275.1580400811-1583972020.1578588772'][text()='Register Robots']";
+	private String regrob = "//IMG[@src='/-/media/images/features/navigation/support/register_your_robot-700x700.ashx?h=116&la=en&mh=300&mw=300&w=116&lm=636911243530000000&hash=C836F9B8493815260EB3C053063834CE']";
 	
 
-	private String ret_warr = "//A[@href='https://www.irobot.com/About-iRobot/Returns'][contains(text(),'Returns ')]";
+	private String ret_warr = "//IMG[@src='/-/media/images/features/navigation/support/warranty-700x578.ashx?h=116&la=en&mh=300&mw=300&w=117&lm=636911248440000000&hash=584902F8195EF4EB20A5113CD9209BA3']";
 	
 
-	private String contact_cust_care = "//A[@href='https://homesupport.irobot.com/app/answers/detail/a_id/200?_ga=2.178227941.1100369275.1580400811-1583972020.1578588772'][text()='Contact Customer Care']";
+	private String contact_cust_care = "//IMG[@src='/-/media/images/features/navigation/support/contact_care.ashx?h=117&la=en&mh=300&mw=300&w=117&lm=636911242730000000&hash=19C19509F26CCF6A27F32D745395E370']";
 	
 
 	private String access_parts = "//A[@class='a-link'][contains(text(),'Accessories ')]";

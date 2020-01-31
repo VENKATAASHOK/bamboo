@@ -6,6 +6,6 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin = {"summary","timeline:src/test/resources/cucumber-parallel-report"})
+@CucumberOptions(plugin = {"pretty", "html:target/cucumber-reports"})
 public class RunnerTest {
 }
