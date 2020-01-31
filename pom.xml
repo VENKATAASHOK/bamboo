@@ -17,6 +17,7 @@
 	</properties>
 
 	<dependencies>
+		
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
@@ -45,7 +46,7 @@
 				<version>3.0.0-M3</version>
 				<configuration>
 					<parallel>methods</parallel>
-					<threadCount>4</threadCount>
+					<threadCount>8</threadCount>
 				</configuration>				
 			</plugin>
 		</plugins>

@@ -42,8 +42,8 @@ public class StepDefinition {
 	public void user_is_on_dev_Home_Page() {
 	    // Write code here that turns the phrase above into concrete actions
 		driver.manage().window().maximize();
-		driver.get("https://dev9.irobot.com/");
-		System.out.println("On dev9 page");
+		driver.get("https://www.irobot.com/");
+		System.out.println("On irobot.com page");
 	}
 
 
@@ -70,6 +70,7 @@ public class StepDefinition {
 			Assert.assertTrue(false);
 			System.out.println("Test failed");
 		}
+		driver.close();
 		
 	}
 	
@@ -80,16 +81,16 @@ public class StepDefinition {
 
 	private String support = "//A[@class='a-link a-link--nav'][text()='Support']";
 	
-	private String findans = "//IMG[@src='/-/media/images/features/navigation/support/find_answers.ashx?h=300&la=en&mh=300&mw=300&w=300&lm=636898155040000000&hash=946FD382ACC418AB9602041B9F3830A8']";
+	private String findans = "//IMG[@src='/-/media/images/features/navigation/support/find_answers.ashx?h=116&la=en&mh=300&mw=300&w=117&lm=636911243120000000&hash=3DDC29452FD85BEAB4C763D62BD992C9']";
 	
 
-	private String regrob = "//IMG[@src='/-/media/images/features/navigation/support/register_your_robot-700x700.ashx?h=300&la=en&mh=300&mw=300&w=299&lm=636898149330000000&hash=D3B42B3F04ECA900A5FA80BC077AFE8E']";
+	private String regrob = "//IMG[@src='/-/media/images/features/navigation/support/register_your_robot-700x700.ashx?h=116&la=en&mh=300&mw=300&w=116&lm=636911243530000000&hash=C836F9B8493815260EB3C053063834CE']";
 	
 
-	private String ret_warr = "//IMG[@src='/-/media/images/features/navigation/support/warranty-700x578.ashx?h=247&la=en&mh=300&mw=300&w=300&lm=636898148920000000&hash=42153B64AA6D2DFFEB5C76ABFF084B95']";
+	private String ret_warr = "//IMG[@src='/-/media/images/features/navigation/support/warranty-700x578.ashx?h=116&la=en&mh=300&mw=300&w=117&lm=636911248440000000&hash=584902F8195EF4EB20A5113CD9209BA3']";
 	
 
-	private String contact_cust_care = "//IMG[@src='/-/media/images/features/navigation/support/contact_care.ashx?h=300&la=en&mh=300&mw=300&w=300&lm=636898154700000000&hash=35E57AD308F4B5156E542629AD0B9338']";
+	private String contact_cust_care = "//IMG[@src='/-/media/images/features/navigation/support/contact_care.ashx?h=117&la=en&mh=300&mw=300&w=117&lm=636911242730000000&hash=19C19509F26CCF6A27F32D745395E370']";
 	
 
 	private String access_parts = "//A[@class='a-link'][contains(text(),'Accessories ')]";
@@ -102,8 +103,8 @@ public class StepDefinition {
 	public void user_clicks_on_the_support_link() {
 	    // Write code here that turns the phrase above into concrete actions
 		driver.manage().window().maximize();
-		driver.get("https://dev9.irobot.com/");
-		System.out.println("On dev9 page");
+		driver.get("https://www.irobot.com/");
+		System.out.println("On irobot.com page");
 		driver.findElement(By.xpath(support)).click();
 	}
 
@@ -125,7 +126,7 @@ public class StepDefinition {
 			System.out.println("Test failed");
 			
 		}
-		driver.get("https://dev9.irobot.com/");
+		driver.get("https://www.irobot.com/");
 		user_clicks_on_the_support_link();
 		System.out.println("out of find ans");
 	}
@@ -147,7 +148,7 @@ public class StepDefinition {
 			System.out.println("Test failed");
 			
 		}
-		driver.get("https://dev9.irobot.com/");
+		driver.get("https://www.irobot.com/");
 		user_clicks_on_the_support_link();
 	}
 
@@ -158,7 +159,7 @@ public class StepDefinition {
 		driver.findElement(By.xpath(ret_warr)).click();
 		url = driver.getCurrentUrl();
 		System.out.println(url);
-		if(url.contains("dev9"))
+		if(url.contains("irobot.com"))
 		{
 			Assert.assertTrue(true);
 			System.out.println("Test Passed");
@@ -189,7 +190,7 @@ public class StepDefinition {
 			System.out.println("Test failed");
 			
 		}
-		driver.get("https://dev9.irobot.com/");
+		driver.get("https://www.irobot.com/");
 		user_clicks_on_the_support_link();
 	}
 
@@ -210,7 +211,7 @@ public class StepDefinition {
 			System.out.println("Test failed");
 			
 		}
-		driver.get("https://dev9.irobot.com/");
+		driver.get("https://www.irobot.com/");
 		user_clicks_on_the_support_link();
 	}
 
@@ -220,7 +221,7 @@ public class StepDefinition {
 		driver.findElement(By.xpath(auth_resell)).click();
 		url = driver.getCurrentUrl();
 		System.out.println(url);
-		if(url.contains("dev9"))
+		if(url.contains("irobot.com"))
 		{
 			Assert.assertTrue(true);
 			System.out.println("Test Passed");
@@ -231,12 +232,185 @@ public class StepDefinition {
 			System.out.println("Test failed");
 			
 		}
-		driver.get("https://dev9.irobot.com/");
+		driver.get("https://www.irobot.com/");
 		user_clicks_on_the_support_link();
+		driver.close();
 	}
 	
 	
+	//***********************************About link scenario************************************//
 	
+	
+	
+	private String about = "//A[@class='a-link a-link--nav'][text()='About']";
+	
+	private String company_overview = "(//A[@class='a-link'][text()='Overview'][text()='Overview'])[1]";
+	
+	
+	private String history = "//A[@class='a-link'][text()='History']";
+	
+	private String mng_team = "//A[@class='a-link'][text()='Leadership Team']";
+	
+	private String board_mem = "//A[@class='a-link'][text()='Board Members']";
+	
+	
+	private String tech_org = "//A[@class='a-link'][text()='Technology Organization']";
+	
+
+	private String iR_ventures = "//A[@class='a-link'][text()='iRobot Ventures']";
+	
+
+	private String stem_overview = "(//A[@class='a-link'][text()='Overview'][text()='Overview'])[2]";
+	
+
+	private String stem_resource = "//A[@class='a-link'][text()='STEM Resources']";
+	
+
+	private String create_two = "//A[@class='a-link'][text()='Create 2']";
+	
+
+	private String create_two_proj = "//A[@class='a-link'][text()='Create 2 Projects']";
+	
+	private String investors_overview = "(//A[@class='a-link'][text()='Overview'][text()='Overview'])[3]";
+	
+
+	private String stock_info = "//A[@class='a-link'][text()='Stock Information']";
+	
+
+	private String press_overview = "(//A[@class='a-link'][text()='Media Kits']";
+	
+
+	private String careers_overview = "(//A[@class='a-link'][text()='Overview'][text()='Overview'])[4]";
+
+	private String what_set_us = "//A[@class='a-link'][text()='What Sets Us Apart']";
+	
+	private String tech_futurist = "//A[@class='a-link'][text()='Tech Futurist']";
+	
+
+	private String Buss_genius = "//A[@class='a-link'][text()='Business Genius']";
+	
+
+	private String internships = "//A[@class='a-link'][text()='Internships']";
+	
+
+	private String how_we_hire = "//A[@class='a-link'][text()='How We Hire']";
+	
+
+	private String job_search = "//A[@class='a-link'][text()='Job Search']";
+
+	
+	public void loopdev() {
+		if(url.contains("irobot.com"))
+		{
+			Assert.assertTrue(true);
+			System.out.println("Test Passed");
+		}
+		else
+		{
+			Assert.assertTrue(false);
+			System.out.println("Test failed");
+			
+		}
+		driver.findElement(By.xpath(about)).click();
+
+	}
+	
+	public void loopinvestor() {
+		if(url.contains("investor"))
+		{
+			Assert.assertTrue(true);
+			System.out.println("Test Passed");
+		}
+		else
+		{
+			Assert.assertTrue(false);
+			System.out.println("Test failed");
+			
+		}
+		driver.navigate().back();
+	}
+	
+	public void loopmedia() {
+		if(url.contains("media"))
+		{
+			Assert.assertTrue(true);
+			System.out.println("Test Passed");
+		}
+		else
+		{
+			Assert.assertTrue(false);
+			System.out.println("Test failed");
+			
+		}
+		driver.navigate().back();
+	}
+	
+	public void loopworkday() {
+		if(url.contains("myworkdayjobs"))
+		{
+			Assert.assertTrue(true);
+			System.out.println("Test Passed");
+		}
+		else
+		{
+			Assert.assertTrue(false);
+			System.out.println("Test failed");
+			
+		}
+		driver.navigate().back();
+	}
+	
+	@When("^user clicks on the about link$")
+	public void user_clicks_on_the_about_link() {
+	    // Write code here that turns the phrase above into concrete actions
+		driver.manage().window().maximize();
+		driver.get("https://www.irobot.com/");
+		System.out.println("On irobot.com page");
+		driver.findElement(By.xpath(about)).click();	
+	}
+
+
+	@When("^user checks all the links under company info$")
+	public void user_checks_all_the_links_under_company_info() {
+	    // Write code here that turns the phrase above into concrete actions
+		driver.findElement(By.xpath(company_overview)).click();
+		url = driver.getCurrentUrl();
+		loopdev();
+
+	}
+
+	@When("^user checks all the links under stem$")
+	public void user_checks_all_the_links_under_stem() {
+	    // Write code here that turns the phrase above into concrete actions
+		driver.findElement(By.xpath(company_overview)).click();
+		url = driver.getCurrentUrl();
+		loopdev();
+		user_clicks_on_the_about_link();
+	}
+
+	@When("^user checks all the links under investors$")
+	public void user_checks_all_the_links_under_investors() {
+	    // Write code here that turns the phrase above into concrete actions
+		driver.findElement(By.xpath(investors_overview)).click();
+		url = driver.getCurrentUrl();
+		user_clicks_on_the_about_link();
+	}
+
+	@When("^user checks all the links under press$")
+	public void user_checks_all_the_links_under_press() {
+	    // Write code here that turns the phrase above into concrete actions
+	}
+
+	@When("^user checks all the links under careers$")
+	public void user_checks_all_the_links_under_careers() {
+	    // Write code here that turns the phrase above into concrete actions
+		driver.findElement(By.xpath(careers_overview)).click();
+		url = driver.getCurrentUrl();
+		loopdev();
+		user_clicks_on_the_about_link();
+		driver.close();
+	}
+
 	
 	
 	
