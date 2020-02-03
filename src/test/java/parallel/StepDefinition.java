@@ -70,7 +70,6 @@ public class StepDefinition {
 			Assert.assertTrue(false);
 			System.out.println("Test failed");
 		}
-		driver.close();
 		
 	}
 	
@@ -234,7 +233,6 @@ public class StepDefinition {
 		}
 		driver.get("https://www.irobot.com/");
 		user_clicks_on_the_support_link();
-		driver.close();
 	}
 	
 	
@@ -408,7 +406,6 @@ public class StepDefinition {
 		url = driver.getCurrentUrl();
 		loopdev();
 		user_clicks_on_the_about_link();
-		driver.close();
 	}
 
 	
